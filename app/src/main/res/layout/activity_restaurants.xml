@@ -10,14 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.myrestaurants.RestaurantsActivity">
 
-    <EditText
+    <TextView
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout
-        android:inputType="textPersonName"
-        android:text="New Text"
-        android:ems="10"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="124dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="186dp"
         android:id="@+id/locationTextView" />
 </RelativeLayout>
