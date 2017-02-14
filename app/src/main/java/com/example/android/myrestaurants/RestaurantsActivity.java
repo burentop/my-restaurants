@@ -10,18 +10,21 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class RestaurantsActivity extends AppCompatActivity {
-    private TextView mLocationTextView;
+    @Bind(R.id.locationTextView) TextView mLocationTextView;
+    @Bind(R.id.listView) ListView mListView;
+
     private String[] restaurants = new String[] {"Dairyette", "Green Spot", "Alfonso's", "20 Foot Seafood", "Keller's", "Latin Deli", "One90 Smoked Meats", "YamaSushi", "Mr. Max", "Manny's Uptown", "Angry Dog"};
-    private ListView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
+        ButterKnife.bind(this);
 
-        mLocationTextView = (TextView) findViewById(R.id.locationTextView);
-        mListView = (ListView) findViewById(R.id.listView);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, restaurants);
         mListView.setAdapter(adapter);
 
